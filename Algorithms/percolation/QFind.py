@@ -22,8 +22,8 @@ class QFind:
         for index in range(len(self.QUImpdata)):
             if(self.QUImpdata[index] == node_a ):
                 self.QUImpdata[index] = self.QUImpdata[node_b]
-        print self.QUImpdata        
-        return False
+        #print self.QUImpdata        
+
     
 x = QFind(10)
 

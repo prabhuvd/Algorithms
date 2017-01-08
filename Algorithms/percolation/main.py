@@ -16,13 +16,13 @@ logger = logging.getLogger(__name__)
 logger.propagate = False
 
 UPDATE_500MS_TIMER = 0.5
-XY_MATRIX_LENGTH = 10
-BLOCK_WIDTH=40
+XY_MATRIX_LENGTH = 20
+BLOCK_WIDTH=35
 
 XY_MATRIX_INCLUDING_VNODES = XY_MATRIX_LENGTH +1
 TOTAL_NODES  = XY_MATRIX_LENGTH  * XY_MATRIX_LENGTH 
 ENTIRE_RANGE = range(1,TOTAL_NODES+1)
-SCREEN_WIDTH = BLOCK_WIDTH*XY_MATRIX_LENGTH+200
+SCREEN_WIDTH = BLOCK_WIDTH*XY_MATRIX_LENGTH+300
 SCREEN_HEIGHT= BLOCK_WIDTH*XY_MATRIX_LENGTH+200
 
 # Define some colors
@@ -41,7 +41,7 @@ global_simulate_once = False
 global_screen=0
  
 instance_viz_data = VisualizeData.VisualizeData(XY_MATRIX_LENGTH,BLOCK_WIDTH)
-  
+print instance_viz_data.getdataCoOrdinates()  
 pygame.init()
  
 # Set the width and height of the  screen [width, height]
@@ -142,9 +142,9 @@ def updateScreen():
     # Display instruction for simulation
     global_screen.blit(txtSimInstruction, (0, 0))
     # Display average probability number 
-    global_screen.blit(txtsimResulttxt, (SCREEN_WIDTH-300, 0))
+    global_screen.blit(txtsimResulttxt, (0, 20))
     # Display all the open nodes created during simulation
-    global_screen.blit(txtPercNodes, (0, 20))
+    global_screen.blit(txtPercNodes, (0, 40))
     
     for xyblock in instance_viz_data.getdataCoOrdinates():
         if(instance_viz_data.getdataBlock(index) == True):
@@ -198,7 +198,7 @@ while not local_done:
                 logger.debug("Percolated at block =%d", i+1)
                 logger.debug(global_opened_sites) 
                 local_percolated_list.append((i+1)/float(TOTAL_NODES))
-                txtsimResulttxt = global_bigFont.render("Probability = "+str(average(local_percolated_list)), 1, BROWN)
+                txtsimResulttxt = global_bigFont.render("Average Probability = "+str(average(local_percolated_list)), 1, BROWN)
                 txtPercNodes = global_mediumFont.render("Opened Nodes="+str(global_opened_sites), 1, MAROON)                        
                 break          
         

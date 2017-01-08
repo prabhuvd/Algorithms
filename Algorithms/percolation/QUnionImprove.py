@@ -1,4 +1,12 @@
 '''
+
+Weighted quick-union.
+-Modify quick-union to avoid tall trees.
+-Keep track of size of each component.
+-Balance by linking small tree below large one.
+
+https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
+
 Created on Dec 28, 2016
 
 @author: pdesai 
@@ -48,8 +56,7 @@ class QUnionImprove:
             
         #print self.__quimpNodes   
         #print self.__quiNodeSize
-        return False
-    
+
         
 # x = QUnionImprove(10)
 # print x.__quimpNodes

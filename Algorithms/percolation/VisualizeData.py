@@ -11,7 +11,7 @@ Created on Dec 30, 2016
     ------
 '''
 class VisualizeData:
-    
+    SCREE_OFFSET=50
     def __init__(self,row_columns=4,blockWidth=80):
         self.__rowCol = row_columns
         self.__blockWidth = blockWidth       
@@ -23,7 +23,7 @@ class VisualizeData:
     def generateBlocks(self):     
         for row in range(self.__rowCol):
             for x in range(self.__blockWidth,self.__blockWidth+self.__blockWidth*self.__rowCol,self.__blockWidth):
-                self.__nodeCoOrdinates.append([x,self.__blockWidth*(row+1),self.__blockWidth,self.__blockWidth]) 
+                self.__nodeCoOrdinates.append([self.SCREE_OFFSET+x,self.SCREE_OFFSET+self.__blockWidth*(row+1),self.__blockWidth,self.__blockWidth]) 
     
     def setdataBlock(self,index):        
         self.__vizNodes[index] = True    

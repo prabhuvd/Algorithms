@@ -39,8 +39,7 @@ class QUnion:
         root_of_node_a = self.root(node_a)
         root_of_node_b = self.root(node_b)
         self.QUImpdata[root_of_node_a] = root_of_node_b
-        #print self.QUImpdata        
-        return False
+        #print self.QUImpdata
     
         
 # x = QUnion(10)
