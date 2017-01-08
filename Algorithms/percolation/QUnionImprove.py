@@ -5,6 +5,7 @@ Weighted quick-union.
 -Keep track of size of each component.
 -Balance by linking small tree below large one.
 
+To understand the working of QFind refer to slides at 
 https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
 
 Created on Dec 28, 2016
