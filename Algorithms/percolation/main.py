@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 logger.propagate = False
 
 UPDATE_500MS_TIMER = 0.5
-XY_MATRIX_LENGTH = 20
-BLOCK_WIDTH=35
+XY_MATRIX_LENGTH = 100
+BLOCK_WIDTH=10
 
 XY_MATRIX_INCLUDING_VNODES = XY_MATRIX_LENGTH +1
 TOTAL_NODES  = XY_MATRIX_LENGTH  * XY_MATRIX_LENGTH 
@@ -145,7 +145,7 @@ def updateScreen():
     # Display average probability number 
     global_screen.blit(txtsimResulttxt, (0, 20))
     # Display all the open nodes created during simulation
-    global_screen.blit(txtPercNodes, (0, 40))
+    #global_screen.blit(txtPercNodes, (0, 40))
     
     for xyblock in instance_viz_data.getdataCoOrdinates():
         if(instance_viz_data.getdataBlock(index) == True):
@@ -200,7 +200,7 @@ while not local_done:
                 logger.debug(global_opened_sites) 
                 local_percolated_list.append((i+1)/float(TOTAL_NODES))
                 txtsimResulttxt = global_bigFont.render("Average Probability = "+str(average(local_percolated_list)), 1, BROWN)
-                txtPercNodes = global_mediumFont.render("Opened Nodes="+str(global_opened_sites), 1, MAROON)                        
+                #txtPercNodes = global_mediumFont.render("Opened Nodes="+str(global_opened_sites), 1, MAROON)                        
                 break          
         
     # --- Game logic should go here
