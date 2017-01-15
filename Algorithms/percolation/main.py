@@ -42,7 +42,7 @@ global_simulate_once = False
 global_screen=0
  
 instance_viz_data = VisualizeData.VisualizeData(XY_MATRIX_LENGTH,BLOCK_WIDTH)
-print instance_viz_data.getdataCoOrdinates()  
+#print instance_viz_data.getdataCoOrdinates()  
 pygame.init()
  
 # Set the width and height of the  screen [width, height]
