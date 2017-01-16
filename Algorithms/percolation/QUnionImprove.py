@@ -53,6 +53,7 @@ class QUnionImprove:
         if(root_of_node_a == root_of_node_b):
             return
         
+        #Check the size of the roots of the given two nodes.
         if(self.__quiNodeSize[root_of_node_a]<self.__quiNodeSize[root_of_node_b]):
             self.__quimpNodes[root_of_node_a] = root_of_node_b
             self.__quiNodeSize[root_of_node_b] =self.__quiNodeSize[root_of_node_b]+self.__quiNodeSize[node_a]
