@@ -66,32 +66,32 @@ class QUnionImprove:
         print self.__quiNodeSize
 
         
-x = QUnionImprove(3)
-  
-  
-x.union(4,3)
-  
-print x.connected(3, 4)
-print x.root(3)
-print x.root(4)
-  
-x.union(3,8)
-
-
-x.union(1,5)
-x.union(2,5)
-
-x.union(4,5)
-
-# x.union(6,5)
-# x.union(9,4)
-# x.union(2,1)
-   
-  
-# print x.connected(1,7)
-  
-x.union(5,0)
-x.union(7,2)
-x.union(6,1)
-x.union(7,3)
+# x = QUnionImprove(3)
+#   
+#   
+# x.union(4,3)
+#   
+# print x.connected(3, 4)
+# print x.root(3)
+# print x.root(4)
+#   
+# x.union(3,8)
+# 
+# 
+# x.union(1,5)
+# x.union(2,5)
+# 
+# x.union(4,5)
+# 
+# # x.union(6,5)
+# # x.union(9,4)
+# # x.union(2,1)
+#    
+#   
+# # print x.connected(1,7)
+#   
+# x.union(5,0)
+# x.union(7,2)
+# x.union(6,1)
+# x.union(7,3)
 
